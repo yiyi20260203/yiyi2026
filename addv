@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>联系我</title>
+    <style>
+        body { font-family: "Microsoft YaHei", sans-serif; text-align: center; padding: 50px; }
+        .weixin { color: green; font-size: 24px; margin: 20px; }
+        button { padding: 10px 20px; background: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    
+    <p>+v：<span class="weixin">wz888888</span></p >
+    <button onclick="copyText()">点击复制微信号</button>
+
+    <script>
+        function copyText() {
+            const text = document.querySelector('.weixin').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('微信号已复制到剪贴板！');
+            });
+        }
+    </script>
+</body>
+</html>
